@@ -122,7 +122,7 @@
             bindings = <
 &trans  &trans  &trans  &trans  &trans                      &kp RC(LEFT)  &kp LG(LEFT_BRACKET)  &trans    &kp LG(RIGHT_BRACKET)  &kp RC(RIGHT)
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans        &mkp MB1              &mkp MB3  &mkp MB2               &kp RC(UP_ARROW)
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans        &trans                &trans    &trans                 &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans        &kp LC(LS(TAB))       &trans    &kp LC(TAB)            &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                                                               &trans
             >;
         };
