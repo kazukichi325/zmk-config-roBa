@@ -40,7 +40,7 @@
         };
 
         muhennkann {
-            bindings = <&to_layer_0 INT_MUHENKAN>;
+            bindings = <&macIME INT_MUHENKAN>;
             key-positions = <11 10>;
         };
 
@@ -56,11 +56,24 @@
     };
 
     macros {
-        to_layer_0: to_layer_0 {
-            compatible = "zmk,behavior-macro-one-param";
-            #binding-cells = <1>;
-            bindings = <&to 0 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
+        macIME: to_layer_0 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&kp RIGHT_CONTROL>,
+                <&macro_tap>,
+                <&kp SPACE>,
+                <&macro_release>,
+                <&kp LEFT_CONTROL>;
+
             label = "TO_LAYER_0";
+        };
+
+        macIME: macIME {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none>;
+            label = "MACIME";
         };
     };
 
@@ -68,7 +81,7 @@
         lt_to_layer_0: lt_to_layer_0 {
             compatible = "zmk,behavior-hold-tap";
             label = "LAYER_TAP_TO_0";
-            bindings = <&mo>, <&to_layer_0>;
+            bindings = <&mo>, <&macIME>;
 
             #binding-cells = <2>;
             tapping-term-ms = <200>;
@@ -80,10 +93,10 @@
 
         mac {
             bindings = <
-&kp Q             &kp W             &kp E         &kp R                      &kp T                                              &kp Y          &kp U  &lt 5 I    &kp O    &kp P
-&kp A             &kp S             &kp D         &kp F                      &kp G        &kp LS(LG(S))        &kp MINUS        &kp H          &kp J  &kp K      &kp L    &kp MINUS
-&mt LEFT_SHIFT Z  &kp X             &kp C         &kp V                      &kp B        &kp COLON            &lt 7 SEMICOLON  &kp N          &kp M  &kp COMMA  &kp DOT  &mt RIGHT_SHIFT SLASH
-&kp TAB           &kp LEFT_CONTROL  &kp LEFT_ALT  &mt LEFT_COMMAND CAPSLOCK  &lt 1 SPACE  &mt LANG1 LANG2      &lt 3 ENTER      &kp BACKSPACE                             &mt DELETE ESCAPE
+&kp Q             &kp W             &kp E         &kp R    &kp T                                              &kp Y          &kp U  &lt 5 I    &kp O    &kp P
+&kp A             &kp S             &kp D         &kp F    &kp G        &kp LS(LG(S))        &kp MINUS        &kp H          &kp J  &kp K      &kp L    &kp MINUS
+&mt LEFT_SHIFT Z  &kp X             &kp C         &kp V    &kp B        &kp COLON            &lt 7 SEMICOLON  &kp N          &kp M  &kp COMMA  &kp DOT  &mt RIGHT_SHIFT SLASH
+&kp TAB           &kp LEFT_CONTROL  &kp LEFT_ALT  &macIME  &lt 1 SPACE  &mt LANG1 LANG2      &lt 3 ENTER      &kp BACKSPACE                             &mt DELETE ESCAPE
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
