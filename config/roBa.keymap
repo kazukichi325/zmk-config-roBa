@@ -68,13 +68,6 @@
 
             label = "TO_LAYER_0";
         };
-
-        macIME: macIME {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&none>;
-            label = "MACIME";
-        };
     };
 
     behaviors {
