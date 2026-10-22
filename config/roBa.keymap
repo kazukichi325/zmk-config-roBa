@@ -75,7 +75,7 @@
             sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
         };
 
-        NUM {
+        symbol {
             bindings = <
 &kp MINUS                   &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp MINUS        &kp PLUS                                                   &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp LEFT_BRACE        &kp RIGHT_BRACE
 &kp SLASH                   &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp SLASH        &kp ASTERISK  &kp LC(LA(KP_NUMBER_0))      &kp UNDERSCORE  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS
@@ -84,7 +84,7 @@
             >;
         };
 
-        FUNCTION {
+        number {
             bindings = <
 &trans  &trans  &trans  &trans  &trans                       &kp F1  &kp F2  &kp F3  &kp F4  &kp F5
 &trans  &trans  &trans  &trans  &trans  &trans      &kp F13  &kp F6  &kp F7  &kp F8  &kp F9  &kp F10
@@ -93,7 +93,7 @@
             >;
         };
 
-        ARROW {
+        move {
             bindings = <
 &kp ESCAPE      &kp LC(LS(TAB))         &kp UP_ARROW    &kp LC(TAB)              &trans                       &trans  &trans          &kp UP_ARROW    &trans     &trans
 &kp HOME        &kp LEFT_ARROW          &kp DOWN_ARROW  &kp RIGHT_ARROW          &kp END  &trans      &trans  &trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT  &trans
@@ -104,7 +104,7 @@
             sensor-bindings = <&inc_dec_kp LC(PAGE_UP) LC(PAGE_DOWN)>;
         };
 
-        MOUSE {
+        mouse {
             bindings = <
 &trans  &trans  &trans  &trans  &trans                      &kp RC(LEFT)  &kp LG(LEFT_BRACKET)  &trans    &kp LG(RIGHT_BRACKET)  &kp RC(RIGHT)
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans        &mkp MB1              &mkp MB3  &mkp MB2               &kp RC(UP_ARROW)
@@ -122,7 +122,7 @@
             >;
         };
 
-        windows {
+        setting {
             bindings = <
 &kp Q    &kp W     &kp E     &kp R      &kp T                                    &kp Y   &kp U  &kp I      &kp O    &kp P
 &kp A    &kp S     &kp D     &kp F      &kp G      &kp PG_UP          &kp MINUS  &kp H   &kp J  &kp K      &kp L    &kp MINUS
