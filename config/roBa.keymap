@@ -68,8 +68,8 @@
             bindings = <
 &kp Q             &kp W             &kp E         &kp R             &kp T                                            &kp Y          &kp U  &kp I      &kp O    &kp P
 &kp A             &kp S             &kp D         &kp F             &kp G        &kp LS(LG(S))      &kp MINUS        &kp H          &kp J  &kp K      &kp L    &mkp MB1
-&mt LEFT_SHIFT Z  &kp X             &kp C         &kp V             &kp B        &kp COLON          &lt 7 SEMICOLON  &kp N          &kp M  &kp COMMA  &kp DOT  &mt RIGHT_SHIFT SLASH
-&kp TAB           &kp LEFT_CONTROL  &kp LEFT_ALT  &kp LEFT_COMMAND  &lt 1 SPACE  &kp MINUS          &lt 3 ENTER      &kp BACKSPACE                             &mt DELETE ESCAPE
+&mt LEFT_SHIFT Z  &kp X             &kp C         &kp V             &kp B        &kp COLON          &lt 6 SEMICOLON  &kp N          &kp M  &kp COMMA  &kp DOT  &mt RIGHT_SHIFT SLASH
+&kp TAB           &kp LEFT_CONTROL  &kp LEFT_ALT  &kp LEFT_COMMAND  &lt 2 SPACE  &lt 1 MINUS        &lt 3 ENTER      &kp BACKSPACE                             &mt DELETE ESCAPE
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
@@ -89,7 +89,7 @@
 &kp F1   &kp F2   &kp F3  &kp F4  &kp F5                             &kp NUMBER_1  &kp NUMBER_2  &kp N3        &kp PLUS      &kp MINUS
 &kp F6   &kp F7   &kp F8  &kp F9  &kp F10  &trans      &none         &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp ASTERISK  &kp SLASH
 &kp F11  &kp F12  &trans  &trans  &trans   &trans      &kp NUMBER_0  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &trans        &none
-&trans   &trans   &trans  &trans  &trans   &trans      &trans        &trans                                                  &none
+&trans   &trans   &trans  &trans  &trans   &to 6       &trans        &trans                                                  &none
             >;
         };
 
@@ -106,32 +106,23 @@
 
         mouse {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                      &kp RC(LEFT)  &kp LG(LEFT_BRACKET)  &trans    &kp LG(RIGHT_BRACKET)  &kp RC(RIGHT)
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans        &mkp MB1              &mkp MB3  &mkp MB2               &kp RC(UP_ARROW)
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans        &kp LC(LS(TAB))       &trans    &kp LC(TAB)            &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                                                               &trans
+&trans  &trans  &trans  &trans  &trans                      &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &mkp MB1
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                          &trans
             >;
         };
 
         SCROLL {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                      &trans  &kp RC(LEFT_ARROW)  &trans  &kp RC(RIGHT_ARROW)  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans              &trans  &trans               &kp RC(UP_ARROW)
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans              &trans  &trans               &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                                                   &trans
+&trans  &trans  &trans  &trans  &trans                      &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                          &trans
             >;
         };
 
         setting {
-            bindings = <
-&kp Q    &kp W     &kp E     &kp R      &kp T                                    &kp Y   &kp U  &kp I      &kp O    &kp P
-&kp A    &kp S     &kp D     &kp F      &kp G      &kp PG_UP          &kp MINUS  &kp H   &kp J  &kp K      &kp L    &kp MINUS
-&kp Z    &kp X     &kp C     &kp V      &kp B      &kp LS(COLON)      &kp SEMI   &kp N   &kp M  &kp COMMA  &kp DOT  &kp FSLH
-&kp TAB  &kp LALT  &kp LALT  &sk RCTRL  &sk SPACE  &trans             &trans     &trans                             &kp DEL
-            >;
-        };
-
-        BT {
             bindings = <
 &trans  &trans        &trans        &trans        &trans                           &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
 &trans  &trans        &trans        &trans        &trans  &trans      &trans       &trans        &trans        &trans        &trans        &trans
